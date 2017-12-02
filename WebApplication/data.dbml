@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="search" Class="dataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=AHMAD-PC;Initial Catalog=search;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="searchConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.File_type" Member="File_types">
+    <Type Name="File_type">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Company" Type="System.String" DbType="NVarChar(90)" CanBeNull="true" />
+      <Column Name="F_k_file" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="uploaded_file_File_type" Member="uploaded_file" ThisKey="F_k_file" OtherKey="ID" Type="uploaded_file" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.meaning" Member="meanings">
+    <Type Name="meaning">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="word1" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="word2" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="rootA" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="rootE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.uploaded_file" Member="uploaded_files">
+    <Type Name="uploaded_file">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Uploaded_by" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="file_name" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Admin_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="date_uploaded" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Key_words" Type="System.String" DbType="NVarChar(660)" CanBeNull="true" />
+      <Column Name="File_path" Type="System.String" DbType="NVarChar(900)" CanBeNull="true" />
+      <Association Name="uploaded_file_File_type" Member="File_types" ThisKey="ID" OtherKey="F_k_file" Type="File_type" />
+      <Association Name="User_uploaded_file" Member="User" ThisKey="Admin_id" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="last_name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="date_of_birth" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="User_name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="User_uploaded_file" Member="uploaded_files" ThisKey="ID" OtherKey="Admin_id" Type="uploaded_file" />
+      <Association Name="User_Word_search" Member="Word_searches" ThisKey="ID" OtherKey="Searcher_id" Type="Word_search" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Word" Member="Words">
+    <Type Name="Word">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Word" Member="Word1" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Word_World_syn" Member="World_syns" ThisKey="Id" OtherKey="Word_id" Type="World_syn" />
+    </Type>
+  </Table>
+  <Table Name="dbo.World_syn" Member="World_syns">
+    <Type Name="World_syn">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Word_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Word_S" Type="System.String" DbType="NChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="distance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Word_World_syn" Member="Word" ThisKey="Word_id" OtherKey="Id" Type="Word" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Word_search" Member="Word_searches">
+    <Type Name="Word_search">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Word_search" Member="Word_search1" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="long" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="latid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Searcher_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="date_s" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="User_Word_search" Member="User" ThisKey="Searcher_id" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

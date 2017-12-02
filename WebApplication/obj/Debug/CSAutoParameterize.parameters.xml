@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="searchConnectionString-Web.config Connection String" description="searchConnectionString Connection String used in web.config by the application to access the database." defaultvalue="Data Source=.;Initial Catalog=search;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='searchConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="searchConnectionString1-Web.config Connection String" description="searchConnectionString1 Connection String used in web.config by the application to access the database." defaultvalue="Data Source=.;Initial Catalog=search;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='searchConnectionString1']/@connectionString" />
+  </parameter>
+  <parameter name="searchConnectionString2-Web.config Connection String" description="searchConnectionString2 Connection String used in web.config by the application to access the database." defaultvalue="Data Source=AHMAD-PC;Initial Catalog=search;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='searchConnectionString2']/@connectionString" />
+  </parameter>
+</parameters>

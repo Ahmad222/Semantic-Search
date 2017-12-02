@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="search" Class="DataWordsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=AHMAD-PC;Initial Catalog=search;Integrated Security=True" SettingsObjectName="Searcharoo.Properties.Settings" SettingsPropertyName="searchConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Word" Member="Words">
+    <Type Name="Word">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Word" Member="Word1" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Word_World_syn" Member="World_syns" ThisKey="Id" OtherKey="Word_id" Type="World_syn" />
+    </Type>
+  </Table>
+  <Table Name="dbo.World_syn" Member="World_syns">
+    <Type Name="World_syn">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Word_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Word_S" Type="System.String" DbType="NChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="distance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Word_World_syn" Member="Word" ThisKey="Word_id" OtherKey="Id" Type="Word" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.meaning" Member="meanings">
+    <Type Name="meaning">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="word1" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="word2" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="rootA" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="rootE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

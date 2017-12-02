@@ -1,0 +1,15 @@
+D:\Subjects\Fifth Year\SP\EPocalipse.IFilter\bin\Debug\EPocalipse.IFilter.dll
+D:\Subjects\Fifth Year\SP\EPocalipse.IFilter\bin\Debug\EPocalipse.IFilter.pdb
+D:\Subjects\Fifth Year\SP\EPocalipse.IFilter\obj\Debug\EPocalipse.IFilter.csprojResolveAssemblyReference.cache
+D:\Subjects\Fifth Year\SP\EPocalipse.IFilter\obj\Debug\EPocalipse.IFilter.dll
+D:\Subjects\Fifth Year\SP\EPocalipse.IFilter\obj\Debug\EPocalipse.IFilter.pdb
+D:\AIU\fifth year\first semister\our paper\s5\EPocalipse.IFilter\bin\Debug\EPocalipse.IFilter.dll
+D:\AIU\fifth year\first semister\our paper\s5\EPocalipse.IFilter\bin\Debug\EPocalipse.IFilter.pdb
+D:\AIU\fifth year\first semister\our paper\s5\EPocalipse.IFilter\obj\Debug\EPocalipse.IFilter.csprojResolveAssemblyReference.cache
+D:\AIU\fifth year\first semister\our paper\s5\EPocalipse.IFilter\obj\Debug\EPocalipse.IFilter.dll
+D:\AIU\fifth year\first semister\our paper\s5\EPocalipse.IFilter\obj\Debug\EPocalipse.IFilter.pdb
+D:\s5\EPocalipse.IFilter\bin\Debug\EPocalipse.IFilter.dll
+D:\s5\EPocalipse.IFilter\bin\Debug\EPocalipse.IFilter.pdb
+D:\s5\EPocalipse.IFilter\obj\Debug\EPocalipse.IFilter.dll
+D:\s5\EPocalipse.IFilter\obj\Debug\EPocalipse.IFilter.pdb
+D:\s5\EPocalipse.IFilter\obj\Debug\EPocalipse.IFilter.csprojResolveAssemblyReference.cache

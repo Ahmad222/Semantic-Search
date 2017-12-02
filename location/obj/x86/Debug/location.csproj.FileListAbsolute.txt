@@ -1,0 +1,9 @@
+D:\s5\location\bin\Debug\location.exe
+D:\s5\location\bin\Debug\location.pdb
+D:\s5\location\bin\Debug\GMap.NET.Core.dll
+D:\s5\location\bin\Debug\GMap.NET.WindowsForms.dll
+D:\s5\location\obj\x86\Debug\location.Form1.resources
+D:\s5\location\obj\x86\Debug\location.Properties.Resources.resources
+D:\s5\location\obj\x86\Debug\location.csproj.GenerateResource.Cache
+D:\s5\location\obj\x86\Debug\location.exe
+D:\s5\location\obj\x86\Debug\location.pdb
